@@ -1,4 +1,4 @@
-﻿<!Doctype html>
+<!Doctype html>
 <html>
 <head>
 	<title>Menu CSS jQuery</title>
@@ -22,6 +22,12 @@
 				},300);
 			});
 	});
+	
+	$(document).ready(function(){
+    	$("button").click(function(){
+    	  $("div").animate({left: '250px'});
+    });
+});
 	</script>
 
 	<style>
@@ -31,7 +37,7 @@
 			margin:auto;
            	}
 		#menu ul{list-style:none;
-			font-size:18px;
+			font-size:18px; /*18px/16px=1.125em  */
 			font-family:"Hobo Std";
 			margin:0px;
 			padding:0px;
@@ -56,10 +62,13 @@
 			}
 		#menu ul li a{
 			float:left;
-			background:url("images/Degrade_img.jpg") repeat-x left bottom;
+			background:url("image/Degrade_img.jpg") repeat-x left bottom;
 			color:#000000;
             height:10px;
 			}
+		
+		}
+		
 	</style>
 </head>
 <body>
@@ -72,5 +81,9 @@
 			<li><a href="#">Contato</a></li>
 		</ul>
 	</div>
+	
+	<button>Start Animation</button>
+<div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+
 </body>
 </html>
